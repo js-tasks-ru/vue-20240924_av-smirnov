@@ -14,7 +14,7 @@ export default defineComponent({
       <h1 class="title">Погода в Средиземье</h1>
 
       <ul class="weather-list unstyled-list">
-        <li v-for="place in places" class="weather-card" :class="[{ 'weather-card--night': place.current.dt < place.current.sunrise || place.current.dt > place.current.sunset }]">
+        <li v-for="place in places" class="weather-card" :class="{ 'weather-card--night': place.current.dt < place.current.sunrise || place.current.dt > place.current.sunset }">
           <div v-if="place.alert" class="weather-alert">
             <span class="weather-alert__icon">⚠️</span>
             <span class="weather-alert__description">{{ place.alert.sender_name }}: {{ place.alert.description }}.</span>
